@@ -7,11 +7,11 @@
         }
     ],
     "autoload": {
-        "psr-4": {"52Hertz\\": "src/"}
+        "psr-4": {"FiftyTwoHertz\\": "src/"}
     },
     "autoload-dev" : {
         "psr-4" : {
-            "52Hertz\\Tests\\": "tests/"
+            "FiftyTwoHertz\\Tests\\": "tests/"
         }
     },
     "require": {},
