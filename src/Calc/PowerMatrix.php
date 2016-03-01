@@ -18,9 +18,16 @@ class PowerMatrix {
      */
     public function __construct($m, $n)
     {
-        $o = new MultiplyMatrix();
-        $powerAccumulate = new PowerAccumulate();
-        $this->result = $powerAccumulate->calc($m, $m, $n, $o);
+        if ($n === 0) {
+            $id = new IdentityMatrix();
+            $this->result = $id->calc(
+                count($m[0])
+            );
+        } else {
+            $o = new MultiplyMatrix();
+            $powerAccumulate = new PowerAccumulate();
+            $this->result = $powerAccumulate->calc($m, $m, $n, $o);
+        }
     }
 
     public function getResult()
