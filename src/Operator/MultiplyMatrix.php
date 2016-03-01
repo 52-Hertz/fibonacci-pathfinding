@@ -28,25 +28,15 @@ class MultiplyMatrix implements Operator {
         }
 
         // multiplication here
-        for ($ri=0; $ri<$r; $ri++) {
-            for ($ci=0; $ci<$c; $ci++) {
-                $retval[$ri][$ci] = 0.0;
-                for ($j=0; $j<$in; $j++) {
-                    $retval[$ri][$ci] += $left[$ri][$j] * $right[$j][$ci];
+        for ($ri = 0; $ri < $r; $ri++) {
+            for ($ci = 0; $ci < $c; $ci++) {
+                $retval[$ri][$ci] = (int)0;
+                for ($j = 0; $j < $in; $j++) {
+                    (int)$retval[$ri][$ci] += (int)$left[$ri][$j] * (int)$right[$j][$ci];
                 }
             }
         }
-        return $retval;
 
-        // @TODO: Debug this
-//        $result = [];
-//        for ($i = 0; $i < $right->getWidth(); $i++) {
-//            for ($k = 0; $k < $right->getHeight(); $k++) {
-//                for ($j = 0; $j < $left->getHeight(); $j++) {
-//                    $result[$i][$j] += $right->getIndex([$i][$k]) * $left->getIndex([$k][$j]);
-//                }
-//            }
-//        }
-//        return new ElementGroup($result);
+        return $retval;
     }
 }

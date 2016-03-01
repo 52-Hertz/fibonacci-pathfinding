@@ -25,12 +25,12 @@ class PowerAccumulate {
      */
     public function calc($r, $a, $n, MultiplyMatrix $op)
     {
-        if ($n === 0) {
+        if ((int)$n === 0) {
             return $r;
         }
 
         while(true) {
-            if ($n % 2 !== 0) {
+            if ((int)$n % 2 !== 0) {
                 $r = $op->calc($r, $a);
 
                 if ((int)$n === 1) {
@@ -39,7 +39,7 @@ class PowerAccumulate {
             }
 
             $a = $op->calc($a, $a);
-            $n = floor($n /= 2);
+            $n = (int)$n /= 2;
         }
         return $r;
     }
