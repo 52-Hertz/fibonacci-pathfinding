@@ -58,7 +58,7 @@ class MultiplyMatrixTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testMultiplicationNIsOne()
+    public function testMultiplicationThree()
     {
         $multiMatrix = new MultiplyMatrix();
 
