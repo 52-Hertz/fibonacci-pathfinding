@@ -26,7 +26,7 @@ class PowerMatrix {
         } else {
             $o = new MultiplyMatrix();
             $powerAccumulate = new PowerAccumulate();
-            $this->result = $powerAccumulate->calc($m, $m, $n, $o);
+            $this->result = $powerAccumulate->calc($m, $m, (int)$n - 1, $o);
         }
     }
 
