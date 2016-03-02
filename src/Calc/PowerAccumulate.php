@@ -4,9 +4,7 @@
 namespace FiftyTwoHertz\Calc;
 
 
-use FiftyTwoHertz\Group\ElementGroup;
 use FiftyTwoHertz\Operator\MultiplyMatrix;
-use FiftyTwoHertz\Operator\Operator;
 
 class PowerAccumulate {
     /**
@@ -29,7 +27,7 @@ class PowerAccumulate {
             return $r;
         }
 
-        while(true) {
+        while (true) {
             if ((int)$n % 2 !== 0) {
                 $r = $op->calc($r, $a);
 

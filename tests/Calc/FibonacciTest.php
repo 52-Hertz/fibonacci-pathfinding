@@ -30,6 +30,18 @@ class FibonacciTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
+    public function testFirstFibonacciNumber()
+    {
+        $fibonacci = new Fibonacci(
+            1
+        );
+
+        $this->assertEquals(
+            1,
+            $fibonacci->getResult()
+        );
+    }
+
     public function testSecondFibonacciNumber()
     {
         $fibonacci = new Fibonacci(
@@ -37,8 +49,20 @@ class FibonacciTest extends \PHPUnit_Framework_TestCase {
         );
 
         $this->assertEquals(
-            2,
+            1,
             $fibonacci->getResult()
         );
     }
+
+//    public function testThirdFibonacciNumber()
+//    {
+//        $fibonacci = new Fibonacci(
+//            3
+//        );
+//
+//        $this->assertEquals(
+//            2,
+//            $fibonacci->getResult()
+//        );
+//    }
 }
